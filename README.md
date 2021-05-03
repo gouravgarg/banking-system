@@ -1,4 +1,4 @@
-# UBS - hacker rank
+# Hacker rank
 
 ## Environment:
 - Java version: 1.8
