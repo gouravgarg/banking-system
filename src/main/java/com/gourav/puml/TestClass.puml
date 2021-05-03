@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface BankInterface
+BankInterface <|..Bank :G-Interface
+
+interface TransactionInterface
+TransactionInterface <|.. Transaction :G-Interface
+Bank *-- Transaction :A-Composition
+
+AccountInterface <|.. Account :G-Interface
+Account <-- ConsumerAccount
+Account <-- CommercialAccount :G-AbstractClass
+
+'Bank can have more than zero account
+'Account can have only one bank
+Bank "*" -- "1" Account
+
+AccountHolder *-- Account :A-Composition
+
+Person <-- AccountHolder
+Company <-- AccountHolder :G-AbstractClass
+
+
+
+@enduml

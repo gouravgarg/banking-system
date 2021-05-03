@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Car o-- Engine : Aggregation
+Page *-- Book :Composition
+
+interface TransactionInterface
+TransactionInterface <|.. Transaction :Interface
+
+abstract class Account
+Account <-- CommercialAccount :AbstractClass
+
+@enduml
